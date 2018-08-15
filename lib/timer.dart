@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dhyana/actionbutton.dart';
 
 class Timer extends StatefulWidget
 {
@@ -20,9 +21,27 @@ class _TimerState extends State<Timer>
         (
           children: <Widget>
           [
+            // AnimatedBuilder
+            // (
+            //   animation: _controller,
+            //   builder: (BuildContext context, Widget child)
+            //   {
+            //     return Text
+            //     (
+            //       timeRemaining,
+            //       style: TextStyle
+            //       (
+            //         color: Colors.blueGrey,
+            //         fontSize: 100.0,
+            //         fontWeight: FontWeight.bold,
+            //         letterSpacing: 10.0,
+            //       ),  
+            //     );
+            //   }
+            // ),
             Text
             (
-              "0:00",
+              "1:52",
               textAlign: TextAlign.center,
               style: TextStyle
               (
@@ -31,11 +50,28 @@ class _TimerState extends State<Timer>
                 fontWeight: FontWeight.bold,
                 letterSpacing: 10.0,
               ),
-            )
+            ),
+
+            // Slider
+            // (
+            //   value: 0.0,
+            //   onChanged: null,
+            //   divisions: 6,
+            //   min: 0.0,
+            //   max: 30.0,
+            //   activeColor: Colors.blueGrey,
+            //   inactiveColor: Colors.grey,
+            // ),
           ],
         ),
       ),
+
+      floatingActionButton: ActionButton(),
+
     );
   }
+
+
+
 }
 
